@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="person-circle"></ion-icon>
+      profile
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <diV class="row">
+    <ion-text (click)="back()">
+      <b>
+        <ion-icon style="font-size: 18px" name="arrow-back-sharp"></ion-icon>
+        <ion-label> BACK</ion-label>
+      </b>
+    </ion-text>
+  </diV>
+  <div class="profile">
+    <div class="row">
+      <ion-icon class="avatar" size="40px" name="person-circle-outline" (click)="avatar()"></ion-icon>
+      <input type="file" class="upload" id="file" #userPhoto (change)="onFileSelected($event)" name="image"
+             autocomplete="off"
+      />
+    </div>
+    <div class="row">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label floating [(ngModel)]="profile.firstName" ngDefaultControl>First Name</ion-label>
+      <ion-input class="fn" type="any" placeholder="First Name"/>
+    </div>
+    <div class="row">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <input class="ln" type="any" placeholder="Last Name"/>
+    </div>
+    <div class="row">
+      <ion-icon name="mail-outline"></ion-icon>
+      <input class="email" type="any" placeholder="Email"/>
+    </div>
+    <div class="row">
+      <ion-icon name="calendar-outline"></ion-icon>
+      <input class="dob" type="any" placeholder="Date Of Birth"/>
+    </div>
+    <div class="row">
+      <ion-icon name="business-outline"></ion-icon>
+      <input class="city" type="any" placeholder="city"/>
+    </div>
+    <ion-button shape="round" class="saveData" (click)="save()">save</ion-button>
+  </div>
+</ion-content>

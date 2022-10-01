@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon class="icon" name="settings-sharp"></ion-icon>
+      setting
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <diV class="row">
+    <ion-text (click)="back()">
+      <b>
+        <ion-icon style="font-size: 18px" name="arrow-back-sharp"></ion-icon>
+        <ion-label> BACK</ion-label>
+      </b>
+    </ion-text>
+    <ion-item (click)="phone()">
+      <ion-label> phone number</ion-label>
+    </ion-item>
+    <ion-item (click)="Language()">
+      <ion-label> Language</ion-label>
+    </ion-item>
+    <ion-item (click)="Date()">
+      <ion-label> Date and distances</ion-label>
+    </ion-item>
+    <ion-item (click)="Night()">
+      <ion-label> Night mode</ion-label>
+    </ion-item>
+    <ion-item (click)="navigator()">
+      <ion-label> Navigator</ion-label>
+    </ion-item>
+    <ion-item (click)="rules()">
+      <ion-label> Rules and terms</ion-label>
+    </ion-item>
+  </diV>
+  <div class="row">
+    <ion-button class="logOut" (click)="logout()">logout</ion-button>
+  </div>
+</ion-content>
