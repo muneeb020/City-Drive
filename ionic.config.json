@@ -1,0 +1,8 @@
+{
+  "name": "this way",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
